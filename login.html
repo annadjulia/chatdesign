@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div id="quadroLogo">
+        <img id="logoLogin" src="./media/logo.png" alt="OldWorldChat - Converse!">
+    </div>
+    <div id="quadroLogin" class="container text-center">
+        <div id="loginFrame" class="row align-content-center">
+            <div class="col">
+                <div class="row justify-content-center to"><h1>Insira seu nick</h1></div>
+                <div class="row justify-content-center to"><input type="text" placeholder="Nick"></div>
+                <div class="row justify-content-center to">
+                    <div class="col-auto">
+                        <button type="button" id="btn-entrar" class="btn" onclick="entrar()">Entrar</button>
+                    </div>                    
+                </div>                
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="./login.js"></script>
 </html>
