@@ -34,11 +34,24 @@ let salas = [
       "nome": "Cantinho do Humor",
       "id": "#746325",
       "status": "Pública"
+    },
+    {
+      "nome": "Arte e Inspiração",
+      "id": "#736213",
+      "status": "Pública"
     }
   ]
 
+function entrarSala() {
+    window.location.href = "./sala.html";
+}
+
 salas.forEach(sala => {
     const div = document.createElement("div");
+    if(salas[0] == sala) {
+      div.onclick = entrarSala;
+      div.style.cursor = "pointer";
+    }
     div.classList.add("row");
     div.classList.add("sala");
 
@@ -48,16 +61,19 @@ salas.forEach(sala => {
 
     const nomeRow = document.createElement("div");
     nomeRow.classList.add("row");
+    nomeRow.classList.add("my-1");
     const nomeText = document.createTextNode(sala.nome);
     nomeRow.appendChild(nomeText);
 
     const idRow = document.createElement("div");
     idRow.classList.add("row");
+    idRow.classList.add("my-1");
     const idText = document.createTextNode(sala.id);
     idRow.appendChild(idText);
 
     const statusRow = document.createElement("div");
     statusRow.classList.add("row");
+    statusRow.classList.add("my-1");
     const statusText = document.createTextNode(sala.status);
     statusRow.appendChild(statusText);
 

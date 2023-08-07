@@ -6,7 +6,7 @@
     color: #f7f0f0;
     line-height: normal;
     font-family: 'Inter', sans-serif;
-    font-size: 1.667vw;
+    font-size: 1.3vw;
     /*overflow-x: hidden;*/
 }
 :root {
@@ -16,9 +16,11 @@
 p{
     margin: 0;
 }
+body, html{
+    height: 100%;
+    margin: 0;
+}
 body{
-    width: 100vw;
-    height: 100vh;
     background-image: url("./media/blue-background.jpg");
     background-size: cover;
     background-position: center center;
@@ -79,13 +81,38 @@ input{
     height: 100%;
     float: right;
     position: relative;
+    padding: 0;
+}
+#mae{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+#sair{
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+.nice{
+    width: 100%;
+    margin: 0;
 }
 #rowPesquisa{
     height: 100%;
     padding: 4.583vw 7.014vw;
+    width: 100%;
+    margin: 0;
 }
 #colPesquisa{
     height: 100%;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+}
+#maeSalasLista{
+    max-height: 69.336vh;
+    min-height: 0;
+    flex: 1;
 }
 .sala{
     padding: 0.903vw 1.667vw;
@@ -113,11 +140,11 @@ input{
 
 .barra{
     padding: 1.528vw 2.778vw;
+    min-height: 11.230vh;
+    max-height: 11.230vh;
 }
 #barraDown{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  
 }
 .barra img{
     width: auto;

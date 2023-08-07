@@ -1,7 +1,24 @@
 const mensagensLista = document.getElementById("mensagensLista");
+const mensagens = document.getElementsByClassName("msg");
 const quadroCores = document.getElementById("quadroCores");
 const paleta = document.getElementById("paleta");
+const body = document.getElementsByTagName("body")[0];
+let nomeSala = document.getElementById("nomeSala");
+const mensagensMae = document.querySelector('#mensagensMae');
 const myId = "15";
+
+function alturaMensagensLista() {
+    const barraElement = document.querySelector('.barra');
+    const barraHeight = parseFloat(getComputedStyle(barraElement).height);
+  
+    const windowHeight = window.innerHeight;
+    const mensagensMaeHeight = windowHeight - (barraHeight * 2);
+    
+    mensagensMae.style.height = mensagensMaeHeight + 'px';
+}
+  
+document.addEventListener('DOMContentLoaded', alturaMensagensLista);
+window.addEventListener('resize', alturaMensagensLista);
 
 paleta.onclick = function() {
     if(quadroCores.style.display == "none") {
@@ -19,11 +36,35 @@ const coresCinza = ["#444444","#101010","#121212","#5C5C5C","#363636"];
 let mainColors = coresAzul;
 
 function trocarCor(cor) {
-    if(cor==1) cor=coresAzul;
-    if(cor==2) cor=coresRoxo;
-    if(cor==3) cor=coresVerde;
-    if(cor==4) cor=coresCinza;
+    if(cor==1) {
+        cor=coresAzul;
+        body.style.backgroundImage = "url('./media/blue-background.jpg')";
+    }
+    if(cor==2) {
+        cor=coresRoxo;
+        body.style.backgroundImage = "url('./media/purple-background.jpg')";
+    }
+    if(cor==3) {
+        cor=coresVerde;
+        body.style.backgroundImage = "url('./media/green-background.jpg')";
+    }
+    if(cor==4) {
+        cor=coresCinza;
+        body.style.backgroundImage = "url('./media/gray-background.jpg')";
+    }
     mainColors = cor;
+    Array.from(mensagens).forEach(msg => {
+        let userId = msg.dataset.userId;
+        let msgCol = msg.querySelector(".msgCol");
+        let msgRows = msg.querySelectorAll(".msgRow");
+        let indiceCor = userId % 5;
+        msgCol.style.backgroundColor = mainColors[indiceCor];
+
+        msgRows.forEach(msgRow => {
+            msgRow.style.color = mainColors[indiceCor];
+        });
+    });
+    
     document.documentElement.style.setProperty('--mainColor', cor[0]);
 }
 
@@ -80,6 +121,7 @@ let msgs = [
 
 msgs.forEach(msg => {
     const div = document.createElement("div");
+    div.dataset.userId = msg.id;
     div.classList.add("row");
     div.classList.add("msg");
     let indiceCor = msg.id%5;

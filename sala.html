@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container-fluid text-center">
-        <div class="row">
+        <div class="row" id="mae">
             <div class="col-3">
                 <div class="row" id="rowEsquerda">
                     <div class="col"><img src="./media/sair-alt.png" id="sair" alt="sair"></div>
@@ -19,17 +19,17 @@
                 </div>
             </div>
             <div class="col-9" id="quadroDireita">
-                <div class="row barra" id="barraUp">
+                <div class="row barra nice" id="barraUp">
                     <div class="col">
                         <img src="./media/seta-esquerda.png" alt="voltar">
                     </div>
-                    <div class="col">nome da sala</div>
+                    <div class="col" id="nomeSala">CosmoChat</div>
                     <div class="col">
                         <img src="./media/menu-pontos-vertical.png" alt="">
                     </div>
                 </div>
 
-                <div class="row" id="mensagensMae">
+                <div class="row nice overflow-y-auto" id="mensagensMae">
                     <div class="row" id="quadroCores">
                         <div class="col">
                             <div class="row opc align-content-center" id="corAzul" onclick="trocarCor(1)"><div class="col">Azul</div></div>
@@ -41,7 +41,7 @@
                     <div class="col" id="mensagensLista"></div>
                 </div>
 
-                <div class="row barra" id="barraDown">
+                <div class="row barra nice" id="barraDown">
                     <div class="col-1">
                         <div class="row align-content-center me-auto">
                             <img src="./media/color-palette.png" alt="" id="paleta">
@@ -64,7 +64,7 @@
     </div>
     <!--
     <div class="row">
-        <div class="col">#000000 - Pública</div>
+        <div class="col">#123456 - Pública</div>
     </div>-->
 </body>
 
