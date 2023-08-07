@@ -8,6 +8,7 @@ const mensagensMae = document.querySelector('#mensagensMae');
 const myId = "15";
 
 function alturaMensagensLista() {
+    quadroCores.style.display = "none"
     const barraElement = document.querySelector('.barra');
     const barraHeight = parseFloat(getComputedStyle(barraElement).height);
   
@@ -19,6 +20,16 @@ function alturaMensagensLista() {
   
 document.addEventListener('DOMContentLoaded', alturaMensagensLista);
 window.addEventListener('resize', alturaMensagensLista);
+
+quadroCores.querySelectorAll(".opc").forEach(opc => {
+    opc.mouseover = function() {
+        opc.style.backgroundColor = "white";
+        console.log(opc.cor)
+    }
+    opc.mouseout = function() {
+        opc.style.backgroundColor = "transparent";
+    }
+});
 
 paleta.onclick = function() {
     if(quadroCores.style.display == "none") {

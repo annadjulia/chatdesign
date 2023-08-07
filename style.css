@@ -139,19 +139,18 @@ input{
 }
 
 .barra{
-    padding: 1.528vw 2.778vw;
+    padding: 2.148vh 2.778vw;
     min-height: 11.230vh;
     max-height: 11.230vh;
-}
-#barraDown{
-  
 }
 .barra img{
     width: auto;
     height: 3.125vw;
+    /*max-height: 39.130%;*/
     padding: 0;
+    cursor: pointer;
 }
-#barraDown .row{
+.barra .row{
     height: 100%;
 }
 #mensagem{
@@ -184,7 +183,6 @@ input{
 }
 #corAzul{
     background-color: #01114D;
-    color: #F7F0F0;
 }
 #corAzul:hover{
     background-color: #F7F0F0;

@@ -20,22 +20,30 @@
             </div>
             <div class="col-9" id="quadroDireita">
                 <div class="row barra nice" id="barraUp">
-                    <div class="col">
-                        <img src="./media/seta-esquerda.png" alt="voltar">
+                    <div class="col-1">
+                        <div class="row align-content-center justify-content-start">
+                            <img src="./media/seta-esquerda.png" alt="voltar">
+                        </div>
                     </div>
-                    <div class="col" id="nomeSala">CosmoChat</div>
-                    <div class="col">
-                        <img src="./media/menu-pontos-vertical.png" alt="">
+                    <div class="col-10">
+                        <div class="row align-content-center">
+                            <div class="col" id="nomeSala">CosmoChat</div>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="row align-content-center justify-content-end">
+                            <img src="./media/menu-pontos-vertical.png" alt=""> 
+                        </div>
                     </div>
                 </div>
 
                 <div class="row nice overflow-y-auto" id="mensagensMae">
                     <div class="row" id="quadroCores">
                         <div class="col">
-                            <div class="row opc align-content-center" id="corAzul" onclick="trocarCor(1)"><div class="col">Azul</div></div>
-                            <div class="row opc align-content-center" id="corRoxo" onclick="trocarCor(2)"><div class="col">Roxo</div></div>
-                            <div class="row opc align-content-center" id="corVerde" onclick="trocarCor(3)"><div class="col">Verde</div></div>
-                            <div class="row opc align-content-center" id="corCinza" onclick="trocarCor(4)"><div class="col">Cinza</div></div>
+                            <div class="row opc align-content-center" data-cor="1" id="corAzul" onclick="trocarCor(1)"><div class="col" >Azul</div></div>
+                            <div class="row opc align-content-center" data-cor="2" id="corRoxo" onclick="trocarCor(2)"><div class="col">Roxo</div></div>
+                            <div class="row opc align-content-center" data-cor="3" id="corVerde" onclick="trocarCor(3)"><div class="col">Verde</div></div>
+                            <div class="row opc align-content-center" data-cor="4" id="corCinza" onclick="trocarCor(4)"><div class="col">Cinza</div></div>
                         </div>
                     </div>
                     <div class="col" id="mensagensLista"></div>
@@ -43,8 +51,8 @@
 
                 <div class="row barra nice" id="barraDown">
                     <div class="col-1">
-                        <div class="row align-content-center me-auto">
-                            <img src="./media/color-palette.png" alt="" id="paleta">
+                        <div class="row align-content-center justify-content-start">
+                            <img src="./media/color-palette.png" alt="paleta" id="paleta">
                         </div>
                     </div>
                     <div class="col-10">
@@ -53,8 +61,8 @@
                         </div>
                     </div>
                     <div class="col-1">
-                        <div class="row align-content-center ms-auto">
-                            <img src="./media/aviao-de-papel.png" alt="">
+                        <div class="row align-content-center justify-content-end">
+                            <img src="./media/aviao-de-papel.png" alt="enviar">
                         </div>
                     </div>
                 </div>
