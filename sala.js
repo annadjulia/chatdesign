@@ -21,6 +21,7 @@ function alturaMensagensLista() {
 document.addEventListener('DOMContentLoaded', alturaMensagensLista);
 window.addEventListener('resize', alturaMensagensLista);
 
+console.log(quadroCores.querySelectorAll(".opc"));
 quadroCores.querySelectorAll(".opc").forEach(opc => {
     opc.mouseover = function() {
         opc.style.backgroundColor = "white";
