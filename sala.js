@@ -6,11 +6,33 @@ const body = document.getElementsByTagName("body")[0];
 let nomeSala = document.getElementById("nomeSala");
 const mensagensMae = document.querySelector('#mensagensMae');
 const myId = "15";
+let sair = document.getElementById("sair");
+let info = document.getElementById("info");
+let pontos = document.getElementById("pontos");
+
+sair.onclick = function() {
+    window.location.href = "./index.html";
+}
+
+pontos.onclick = function() {
+    if(info.style.display == "none") {
+        info.style.display = "block";
+        info.style.top = barraHeight + "px";
+        info.style.width = windowWidth - colunalegal + "px";
+        info.style.left = colunalegal + "px";
+    } else {
+        info.style.display = "none";
+    }
+}
+
+const barraElement = document.querySelector('.barra');
+const barraHeight = parseFloat(getComputedStyle(barraElement).height);
+const colunalegal = parseFloat(getComputedStyle(document.querySelector('.col-3')).width);
+const windowWidth = window.innerWidth;
 
 function alturaMensagensLista() {
     quadroCores.style.display = "none"
-    const barraElement = document.querySelector('.barra');
-    const barraHeight = parseFloat(getComputedStyle(barraElement).height);
+    info.style.display = "none"
   
     const windowHeight = window.innerHeight;
     const mensagensMaeHeight = windowHeight - (barraHeight * 2);
@@ -35,6 +57,8 @@ quadroCores.querySelectorAll(".opc").forEach(opc => {
 paleta.onclick = function() {
     if(quadroCores.style.display == "none") {
         quadroCores.style.display = "block";
+        quadroCores.style.bottom = barraHeight + "px";
+        quadroCores.style.left = colunalegal + "px";
     } else {
         quadroCores.style.display = "none";
     }

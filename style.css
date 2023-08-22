@@ -41,7 +41,8 @@ body{
     width: 37.292vw;
     height: 100%;
     background-color: #f7f0f0;
-    float: right;
+    position: fixed;
+    right: 0;
 }
 #loginFrame{
     width: 27.778vw;
@@ -159,7 +160,7 @@ input{
 }
 #quadroCores{
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     bottom: 0;
     left: 0;
@@ -168,7 +169,7 @@ input{
 }
 #mensagensMae{
     position: relative;
-    background-color: #D9D9D9;
+    background-color: #f7f0f0;
 }
 .opc{
     height: 4.514vw;
@@ -226,4 +227,16 @@ input{
     line-height: normal;
     margin: 0.2vw auto;
     font-size: 1.2vw;
+}
+#info{
+    font-size: 1.2vw;
+    font-weight: 400;
+    position: fixed;
+    height: 3.472vw;
+    width: auto;
+    background-color: #d9d9d9;
+    display: none;
+}
+#sair{
+    cursor: pointer;
 }
